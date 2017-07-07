@@ -1,6 +1,6 @@
 console.log('>>> I am index.js! : ')
 var data = [30, 86, 168, 281, 303, 365];
-function dee(){
+$(document).ready(function(){
   d3.select(".chart")
     .selectAll("div")
     .data(data)
@@ -8,5 +8,4 @@ function dee(){
       .append("div")
       .style("width", function(d) { return d + "px"; })
       .text(function(d) { return d; });
-  $(".chart").css("width", Math.max(data));
-}
+});
